@@ -1,0 +1,37 @@
+.footer-view{
+    margin-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color: #fff;
+    background-color: #001d48;
+    position: relative;
+    font-family: "Myriad Pro", sans-serif;
+}
+.footer-view .foot-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -57px;
+    top: -48px;
+}
+.footer-view span.title {
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-view ul li a {
+    color: #fff;
+}
+.footer-view ul li a:hover {
+    color: #ffcb04;
+}
+.columns{
+    background-color: #001d48;
+    float: left;
+    margin-right: 100px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+

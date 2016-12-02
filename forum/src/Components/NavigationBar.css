@@ -1,0 +1,32 @@
+.navigation-bar  {
+    margin-top: 324px;
+    float: right;
+    background: darkblue;
+    text-align: center;
+    padding: 80px 30px;
+    line-height: 1.5;
+    border-radius: 5px;
+
+}
+
+.navigation-bar a{
+    margin-top: -10px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.navigation-bar span{
+    margin-top: -30px;
+    text-align: center;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 5px;
+    display: block;
+}
+.navigation-bar a:hover {
+    background: cornflowerblue;
+}
+

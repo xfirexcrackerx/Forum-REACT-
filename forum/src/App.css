@@ -1,0 +1,66 @@
+@font-face {
+  font-family: ultrasFont;
+  src: url(./Images/ultrasliberi.ttf);
+}
+
+.App {
+  background: #010101;
+  background-image: url('./Images/img2.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  font-size: 1.1em;
+  color: #545B64;
+  margin-top: -100px;
+}
+#content {
+  opacity: 0.97;
+  background-color: #2A2E32;
+  border-radius: 10px;
+  margin-right: 170px;
+  margin-left: 20px;
+}
+.home-view h1{
+  padding-top: 50px;
+  color: blue;
+  font-family: ultrasFont;
+  margin-left: 150px;
+  font-size: 150px;
+  -webkit-text-stroke: 1px white;
+  text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+}
+.home-view h2{
+  margin-left: 150px;
+  font-size: 40px;
+  margin-top: -80px;
+  color: white;
+}
+
+
+#info-box, #error-box, #loading-box {
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  display: none;
+}
+#loading-box {
+  background: #7CB3E9;
+}
+#info-box {
+  background: #393;
+}
+#error-box {
+  background: #F50;
+}
+#main {
+  text-align: center;
+}
