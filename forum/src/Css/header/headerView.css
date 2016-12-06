@@ -1,25 +1,35 @@
-h1{
-  color: blue;
-  font-family: ultrasFont;
-  margin-left: 150px;
-  font-size: 150px;
-  -webkit-text-stroke: 1px white;
-  text-shadow:
-          -1px -1px 0 #000,
-          1px -1px 0 #000,
-          -1px 1px 0 #000,
-          1px 1px 0 #000;
+@font-face {
+    font-family: ultrasFont;
+    src: url(../../Images/ultrasliberi.ttf);
 }
-
-h2{
-  margin-left: 150px;
-  font-size: 40px;
-  margin-top: -20px;
-  color: white;
+header h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: -80px;
+    color: white;
+    margin-bottom: 11px;
+    padding-top: 50px;
+    margin-left: 30px;
+    -webkit-text-stroke: 1px white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }
-
-header{
+header h1{
     text-align: center;
     margin-top: -20px;
     margin-bottom: 11px;
+    padding-top: 50px;
+    color: blue;
+    font-family: ultrasFont;
+    margin-left: 30px;
+    font-size: 150px;
+    -webkit-text-stroke: 1px white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }

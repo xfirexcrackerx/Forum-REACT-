@@ -1,6 +1,8 @@
 .navigation-bar  {
+    position: fixed;
+    margin-top: 100px;
     float: right;
-    background: darkblue;
+    background: #001d48;
     text-align: center;
     padding: 80px 30px;
     line-height: 1.5;
@@ -28,4 +30,3 @@
 .navigation-bar a:hover {
     background: cornflowerblue;
 }
-

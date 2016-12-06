@@ -14,6 +14,8 @@
     top: -48px;
 }
 .footer-view span.title {
+
+    background-color: #001d48;
     display: block;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -27,7 +29,7 @@
     color: #ffcb04;
 }
 .columns{
-    background-color: #001d48;
+    margin-top: -10px;
     float: left;
     margin-right: 100px;
     margin-left: 50px;

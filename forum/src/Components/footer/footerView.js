@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../Css/footer/footerView.css';
 export default class FooterView extends Component {
     render() {
-        document.body.style.backgroundColor = "#001d48";
         return (
             <div className="footer-view">
                 <img className="foot-logo" src="https://levski.bg/front_end/img/footer-logo.png" alt="No logo"/>
