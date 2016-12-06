@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import './NavigationBar.css';
-
+import { Link } from 'react-router'
 
 export default class NavigationBar extends Component {
     render() {
         if (this.props.username==null)
             return (
             <div className="navigation-bar">
-                <a href="#" onClick={this.props.homeClicked}>Home</a>
-                <a href="#" onClick={this.props.loginClicked}>Login</a>
-                <a href="#" onClick={this.props.registerClicked}>Register</a>
+                {this.props.children}
+                
             </div>
-        );
+        )
         else
             return(
                 <div className="navigation-bar">

@@ -40,8 +40,7 @@
   color: white;
 }
 
-
-#info-box, #error-box, #loading-box {
+#infoBox, #errorBox, #loadingBox {
   width: 80%;
   margin: 10px auto;
   color: white;
@@ -50,15 +49,14 @@
   border-radius: 3px;
   cursor: pointer;
 
-  display: none;
 }
-#loading-box {
+#loadingBox {
   background: #7CB3E9;
 }
-#info-box {
+#infoBox {
   background: #393;
 }
-#error-box {
+#errorBox {
   background: #F50;
 }
 #main {

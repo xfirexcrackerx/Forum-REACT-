@@ -1,3 +1,8 @@
+/// <reference path="../../../../../typings/express-serve-static-core/express-serve-static-core.d.ts" />
+/// <reference path="../../../../../typings/node/node.d.ts" />
+
+/// <reference path="../../../../../typings/jquery/jquery.d.ts" />
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
@@ -6,29 +11,29 @@ import $ from 'jquery';
 import NavigationBar from './Components/NavigationBar';
 import Footer from './Components/Footer';
 
-import HomeView from './Views/HomeView';
-import LoginView from './Views/LoginView';
-import RegisterView from './Views/RegisterView';
+import { Link } from 'react-router'
+import observer from './Models/observer';
 
 export default class App extends Component {
   constructor(props){
         super(props);
         this.state={
-            username: sessionStorage.getItem("username"),
-            userId: sessionStorage.getItem("userId")
+            loggedIn: false,
+            username: ''            
         };
+        observer.onSessionUpdate = this.onSessionUpdate.bind(this)
   }
   componentDidMount (){
-      $(document).on({
-          ajaxStart:function () {$("#loadingBox").show()},
-          ajaxStop:function () {$("#loadingBox").hide()}
-      });
+      this.onSessionUpdate();
+  }
 
-      $(document).ajaxError(
-          this.handleAjaxError.bind(this));
-
-      //В НАЧАЛОТО ДА ПОКАЗВА HOME-A А НЕ main app view (Р. 78)
-      this.showHomeView();
+  onSessionUpdate(){
+      let name = sessionStorage.getItem("username");
+      if (name) {
+          this.setState({ loggedIn: true, username: sessionStorage.getItem("username") });
+      } else {
+          this.setState({ loggedIn: false, username: '' });
+      }
   }
 
   handleAjaxError(event,response){
@@ -41,7 +46,7 @@ export default class App extends Component {
   }
 
   showInfo(message){
-      $('infoBox').text(message).show();
+      $('#infoBox').text(message).show();
       setTimeout(function () {
           $('#infoBox').fadeOut();}, 3000);
   }
@@ -59,38 +64,30 @@ export default class App extends Component {
     return (
         <div className="App">
             <header>
-                <NavigationBar
-                    username={this.state.username}
-                    homeClicked={this.showHomeView.bind(this)}
-                    loginClicked={this.showLoginView.bind(this)}
-                    registerClicked={this.showRegisterView.bind(this)}
-                    forumClicked={this.showForumView.bind(this)}
-                    createPostClicked={this.showCreatePostView.bind(this)}
-                    logoutClicked={this.logout.bind(this)}
-                />
-                <div id="error-box">Errors cum here</div>
-                <div id="info-box">Infos cum here</div>
-                <div id="loading-box">Loading....</div>
+                <div id="errorBox">Errors cum here</div>
+                <div id="infoBox">Infos cum here</div>
+                <div id="loadingBox">Loading....</div>
             </header>
-
-
-
+            <NavigationBar>
+                    <Link to="/">Home</Link>
+                    <Link to="/register">Register</Link>
+                    <Link to="/login">Login</Link>
+                    <Link to="/logout">Logout</Link>
+            </NavigationBar>
+            {this.props.children}
             <div id="main">Main app view</div>
-
-
-
             <Footer/>
         </div>
     );
   }
 
-    showHomeView(){
+    /*showHomeView(){
        this.showView(<HomeView/>)
     }
-    showLoginView(){
-        this.showView(<LoginView/>)
+    /*showLoginView(){
+        this.showView(<LoginView onsubmit={this.login.bind(this)}/>)
     }
-    showRegisterView(){
+    /*showRegisterView(){
         this.showView(<RegisterView/>);
     }
     showForumView(){
@@ -101,5 +98,5 @@ export default class App extends Component {
     }
     logout(){
 
-    }
+    }*/
 }

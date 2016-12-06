@@ -2,8 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import Login from './Components/login/loginView';
+import Logout from './Components/logout/logoutView';
+import Register from './Components/register/RegisterView';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './Css/main.css';
+
+import { Router, browserHistory, Route, IndexRoute } from 'react-router'
+
 
 ReactDOM.render(
-  <App />,
+  <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <Route path="register" component={Register}></Route>
+        <Route path="login" component={Login}></Route>
+        <Route path="logout" component={Logout}/>
+      </Route>
+      
+  </Router>,
   document.getElementById('app')
 );

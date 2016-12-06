@@ -5,7 +5,7 @@ export default class Footer extends Component {
         document.body.style.backgroundColor = "#001d48";
         return (
             <div className="footer-view">
-                <img className="foot-logo" src="https://levski.bg/front_end/img/footer-logo.png"/>
+                <img className="foot-logo" src="https://levski.bg/front_end/img/footer-logo.png" alt="No logo"/>
                 <div className="columns" >
                     <span className="title">Клубът</span>
                     <ul>
