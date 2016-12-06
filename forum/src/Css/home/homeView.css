@@ -1,26 +1,7 @@
 .home-view{
   text-align: center;
-}
-
-.home-view h1{
-  padding-top: 50px;
-  color: blue;
-  font-family: ultrasFont;
-  margin-left: 150px;
-  font-size: 150px;
-  -webkit-text-stroke: 1px white;
-  text-shadow:
-          -1px -1px 0 #000,
-          1px -1px 0 #000,
-          -1px 1px 0 #000,
-          1px 1px 0 #000;
-}
-
-.home-view h2{
-  margin-left: 150px;
-  font-size: 40px;
-  margin-top: -80px;
-  color: white;
+  width: 90%;
+  margin: auto;
 }
 
 #content {

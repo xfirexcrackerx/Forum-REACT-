@@ -10,6 +10,7 @@ import $ from 'jquery';
 
 import NavigationBar from './Components/NavigationBar';
 import HomeView from './Components/home/homeView';
+import HeaderView from './Components/header/headerView';
 import Footer from './Components/Footer';
 
 import { Link } from 'react-router'
@@ -38,20 +39,28 @@ export default class App extends Component {
   }
 
   render() {
-    return (
-        <div className="App">
-            <header>
-                <div id="errorBox">Errors cum here</div>
-                <div id="infoBox">Infos cum here</div>
-                <div id="loadingBox">Loading....</div>
-            </header>
-            <NavigationBar>
+      let navbar = {};
+      if(!this.state.loggedIn){
+          navbar = (
+              <NavigationBar>
                     <Link to="/">Home</Link>
                     <Link to="/register">Register</Link>
                     <Link to="/login">Login</Link>
+              </NavigationBar>
+          )
+      }
+      else{
+          navbar = (
+              <NavigationBar>
+                    <Link to="/">Home</Link>
                     <Link to="/logout">Logout</Link>
-                    
-            </NavigationBar>
+              </NavigationBar>
+          )
+      }
+    return (
+        <div className="App">
+            <HeaderView/>
+            {navbar}
             {this.props.children}
             <div id="main">Main app view</div>
             <Footer/>

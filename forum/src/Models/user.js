@@ -29,6 +29,7 @@ let user = (function () {
 
         function registerSuccess(userInfo) {
             //observer.showSuccess('Successful registration.');
+            observer.onSessionUpdate();
             saveSession(userInfo);
             callback(true);
         }
@@ -45,6 +46,7 @@ let user = (function () {
 
         function loginSuccess(userInfo) {  
             //observer.showSuccess('Successful login');
+            observer.onSessionUpdate();
             saveSession(userInfo);
             callback(true);
         }
@@ -57,7 +59,7 @@ let user = (function () {
 
         function logoutSuccess(response) {
             sessionStorage.clear();
-            //observer.onSessionUpdate();
+            observer.onSessionUpdate();
             callback(true);
         }
     }

@@ -4,8 +4,6 @@ import '../../Css/home/homeView.css';
 
 export default function HomeView (){
     return <div className="home-view">
-        <h1>forum.levski.bg</h1>
-        <h2>Форум на привържениците на ПФК ЛЕВСКИ</h2>
         <div id="body" className="width">
             <section id="content" className="first-column-text">
                 <article>
