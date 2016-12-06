@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import LoginForm from './loginForm';
 import user from '../../Models/user';
+import '../../Css/login/login.css';
 
 export default class LoginView extends Component{
     constructor(props){
@@ -13,7 +14,9 @@ export default class LoginView extends Component{
     render(){ return(
         <div className="login-view">
             <div className="row">
+                <div className="col-md-5"></div>
                 <div className="col-md-2">
+                    <h1 className="h1">LOGIN</h1>
                     <LoginForm
                     username={this.state.username}
                     password={this.state.password}
@@ -21,6 +24,7 @@ export default class LoginView extends Component{
                     onSubmitHandler={this.onSubmitHandler.bind(this)}
                     submitDisabled={this.state.submitDisabled}/>
                 </div>
+                <div className="col-md-5"></div>
                 <div className="col-md-5"></div>
             </div>
         </div>

@@ -9,7 +9,6 @@ export default class LoginForm extends Component{
         <div className="login-form">
             <form onSubmit={this.props.onSubmitHandler}> 
                 <div className="form-group">
-                    <h1 className="white">Login</h1>
                     <label htmlFor="username" className="user-n-pass">Username</label>
                     <input 
                     type="text"

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import RegisterForm from './RegisterForm';
 import user from '../../Models/user';
+import '../../Css/register/register.css';
 
 export default class RegisterView extends Component{
     constructor(props){
@@ -15,7 +16,7 @@ export default class RegisterView extends Component{
             <div className="row">
                 <div className="col-md-5"></div>
                 <div className="col-md-2">
-                    <h1 className="white">Register</h1>
+                    <h1 className="h1">Register</h1>
                     <RegisterForm
                     username={this.state.username}
                     password={this.state.password}
