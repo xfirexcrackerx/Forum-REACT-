@@ -13,9 +13,7 @@ export default class LoginView extends Component{
     render(){ return(
         <div className="login-view">
             <div className="row">
-                <div className="col-md-5"></div>
                 <div className="col-md-2">
-                    <h1 className="white">Login</h1>
                     <LoginForm
                     username={this.state.username}
                     password={this.state.password}

@@ -1,16 +1,16 @@
 .navigation-bar  {
     position: fixed;
-    margin-top: 100px;
-    float: right;
+    margin-top: 50px;
     background: #001d48;
     text-align: center;
-    padding: 80px 30px;
+    padding: 70px 25px;
     line-height: 1.5;
     border-radius: 5px;
 
 }
 
 .navigation-bar a{
+    font-size: 20px;
     margin-top: -10px;
     text-align: center;
     color: white;
@@ -28,5 +28,6 @@
     display: block;
 }
 .navigation-bar a:hover {
+    color: black;
     background: cornflowerblue;
 }
