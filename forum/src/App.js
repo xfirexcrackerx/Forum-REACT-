@@ -4,14 +4,11 @@
 /// <reference path="../../../../../typings/jquery/jquery.d.ts" />
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
-import $ from 'jquery';
 
-import NavigationBar from './Components/NavigationBar';
-import HomeView from './Components/home/homeView';
+import NavigationBar from './Components/navbar/navigationBar';
 import HeaderView from './Components/header/headerView';
-import Footer from './Components/Footer';
+import Footer from './Components/footer/footerView';
 
 import { Link } from 'react-router'
 import observer from './Models/observer';
@@ -62,7 +59,6 @@ export default class App extends Component {
             <HeaderView/>
             {navbar}
             {this.props.children}
-            <div id="main">Main app view</div>
             <Footer/>
         </div>
     );

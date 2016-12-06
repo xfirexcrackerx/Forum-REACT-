@@ -9,8 +9,6 @@ let Requester = (function () {
     let app_id = 'kid_r1h555zQl';
     let app_secret = 'fbf75c991ca146ba884a141423a85d83';
     let kinveyBaseUrl = 'https://baas.kinvey.com/';
-    let kinveyBase64Auth = btoa(app_id + ":" + app_secret);
-    let authHeaders = {"Authorization" : 'Basic ' + kinveyBase64Auth};
 
     function makeAuth(type) {
         switch (type) {
