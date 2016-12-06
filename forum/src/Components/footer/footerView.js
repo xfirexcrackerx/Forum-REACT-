@@ -47,9 +47,6 @@ export default class FooterView extends Component {
                                 <br/> e-mail: office@levski.bg
                     </p>
                 </div>
-
-
-
             </div>
         );
     }

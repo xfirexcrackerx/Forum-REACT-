@@ -8,8 +8,10 @@
   background-image: url('./Images/img2.jpg');
   background-position: top;
   background-repeat: no-repeat;
+  background-size: 2500px;
+  width: 100%;
   font-family: 'Source Sans Pro', 'sans-serif';
   font-size: 1.1em;
   color: #545B64;
-  height: 1400px;
+  height: 1000px;
 }

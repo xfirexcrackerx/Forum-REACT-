@@ -2,7 +2,8 @@
     font-family: ultrasFont;
     src: url(../../Images/ultrasliberi.ttf);
 }
-.register-form {
+.register-view {
+
     font-size: 25px;
     color: white;
 }
@@ -20,12 +21,13 @@
             1px 1px 0 #000;
 }
 .user-box{
-
+    color: black;
     text-align: center;
     font-size: 25px;
     height: 40px;
 }
 .pass-box{
+    color: black;
     text-align: center;
     font-size: 25px;
     height: 40px;
@@ -59,7 +61,7 @@
     font-family:Arial;
     font-size:23px;
     font-weight:bold;
-    padding:6px 7px;
+    padding:6px 20px;
     text-shadow:0px 1px 0px #1570cd;
 }
 .button:hover {
