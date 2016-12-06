@@ -1,0 +1,14 @@
+
+
+.rowHeader div{
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+.rowHeader{
+    height: 30px;
+    background-color: #2A2E32;
+    margin: 0px !important; 
+}

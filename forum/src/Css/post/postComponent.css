@@ -1,0 +1,26 @@
+.post-component{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #2A2E32;
+}
+
+.post-component h3, .post-component p{
+    text-align: left;
+}
+.rowComponent{
+    height: 90px;
+    margin: 0px !important; 
+}
+.rowComponent div{
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.rowComponent h3{
+    cursor: pointer;
+}
+
+.rowComponent h3:hover{
+    text-decoration: underline;
+}

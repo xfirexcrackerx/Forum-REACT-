@@ -2,11 +2,11 @@
   text-align: center;
   width: 90%;
   margin: auto;
+  min-height: 319px;
 }
 
 #content {
   opacity: 0.97;
-  background-color: #2A2E32;
   border-radius: 10px;
   margin-right: 90px;
   margin-left: 167px;
