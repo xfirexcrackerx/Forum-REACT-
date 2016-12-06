@@ -9,6 +9,7 @@ import './App.css';
 import $ from 'jquery';
 
 import NavigationBar from './Components/NavigationBar';
+import HomeView from './Components/home/homeView';
 import Footer from './Components/Footer';
 
 import { Link } from 'react-router'
@@ -36,30 +37,6 @@ export default class App extends Component {
       }
   }
 
-  handleAjaxError(event,response){
-      let errorMsg = JSON.stringify(response);
-      if(response.readyState===0)
-          errorMsg="Cannot connect due to network problemche";
-      if (response.responseJSON && response.responseJSON.description)
-          errorMsg=response.responseJSON.description;
-      this.showError(errorMsg);
-  }
-
-  showInfo(message){
-      $('#infoBox').text(message).show();
-      setTimeout(function () {
-          $('#infoBox').fadeOut();}, 3000);
-  }
-  showError(errorMsg){
-      $('#errorBox').text("Error: "+errorMsg).show();
-  }
-  showView(reactComponent){
-        ReactDOM.render(
-            reactComponent,
-            document.getElementById('main'));
-        $('#errorBox').hide();
-  }
-
   render() {
     return (
         <div className="App">
@@ -73,6 +50,7 @@ export default class App extends Component {
                     <Link to="/register">Register</Link>
                     <Link to="/login">Login</Link>
                     <Link to="/logout">Logout</Link>
+                    
             </NavigationBar>
             {this.props.children}
             <div id="main">Main app view</div>
@@ -80,23 +58,4 @@ export default class App extends Component {
         </div>
     );
   }
-
-    /*showHomeView(){
-       this.showView(<HomeView/>)
-    }
-    /*showLoginView(){
-        this.showView(<LoginView onsubmit={this.login.bind(this)}/>)
-    }
-    /*showRegisterView(){
-        this.showView(<RegisterView/>);
-    }
-    showForumView(){
-
-    }
-    showCreatePostView(){
-
-    }
-    logout(){
-
-    }*/
 }
