@@ -9,6 +9,7 @@ import './App.css';
 import NavigationBar from './Components/navbar/navigationBar';
 import HeaderView from './Components/header/headerView';
 import Footer from './Components/footer/footerView';
+import Infobox from './Components/common/infobox';
 
 import { Link } from 'react-router'
 import observer from './Models/observer';
@@ -39,7 +40,7 @@ export default class App extends Component {
       let navbar = {};
       if(!this.state.loggedIn){
           navbar = (
-              <NavigationBar>
+              <NavigationBar user={this.state.username}>
                     <Link to="/">Home</Link>
                     <Link to="/register">Register</Link>
                     <Link to="/login">Login</Link>
@@ -48,7 +49,7 @@ export default class App extends Component {
       }
       else{
           navbar = (
-              <NavigationBar>
+              <NavigationBar user={this.state.username}>
                     <Link to="/">Home</Link>
                     <Link to="/logout">Logout</Link>
               </NavigationBar>
@@ -57,8 +58,9 @@ export default class App extends Component {
     return (
         <div className="App">
             <HeaderView/>
+            <Infobox/>
             {navbar}
-            {this.props.children}
+            {this.props.children}            
             <Footer/>
         </div>
     );
