@@ -24,3 +24,59 @@
 .rowComponent h3:hover{
     text-decoration: underline;
 }
+
+.image1{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image1.jpg");
+}
+
+.image2{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image2.jpg");
+}
+.image3{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image3.jpg");
+}
+.image4{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image4.jpg");
+}
+.image5{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image5.jpg");
+}
+.image6{
+    width: 85px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 12px;
+    background-image:url("../../Images/image6.jpg");
+}

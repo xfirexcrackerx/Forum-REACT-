@@ -8,6 +8,7 @@ export default class PostComponent extends Component {
             <div className="post-component" key={this.props.id}>
                 <div className="row rowComponent">
                     <div className="col-md-9">
+                        <span className={"image" + this.props.postImage}></span>
                         <h3 >{this.props.title}</h3>
                         <p>{this.props.text}</p>                        
                     </div>

@@ -59,6 +59,7 @@ export default class postView extends Component {
                 posts[post].text = posts[post].text.slice(0, 90) + "..."; 
             }
         }
+        let nextNum = 0;
             return (                
             <div className="post-view">
                 <div className="row rowHeader">
@@ -75,15 +76,17 @@ export default class postView extends Component {
                         Author
                     </div>
                 </div>  
-                {posts.map(function (post) {  
-                    return <PostComponent
-                    key={post.id}
-                    title={post.title}
-                    text={post.text}
-                    author={post.author}
-                    answers={post.answers}
-                    views={post.views}
-                    />
+                {posts.map(function(post){
+                    nextNum++;
+                    return (<PostComponent
+                        postImage={nextNum}
+                        key={post.id}
+                        title={post.title}
+                        text={post.text}
+                        author={post.author}
+                        answers={post.answers}
+                        views={post.views}
+                    />)
                 })}
             </div>
 
