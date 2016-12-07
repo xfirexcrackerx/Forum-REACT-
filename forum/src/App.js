@@ -51,6 +51,7 @@ export default class App extends Component {
           navbar = (
               <NavigationBar user={this.state.username}>
                     <Link to="/">Home</Link>
+                    <Link to="/create">Create Category</Link>
                     <Link to="/logout">Logout</Link>
               </NavigationBar>
           )
